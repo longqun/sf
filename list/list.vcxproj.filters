@@ -24,12 +24,66 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="list.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="listnode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="listnode_implementation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_insertAsPre.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_insertAsNext.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_init.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_implementation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_remove.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_clear.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_constructor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_copyNodes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_operator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_push_back.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_push_front.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_destroy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_valid.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_find.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_traverse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="list.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
