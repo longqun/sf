@@ -78,6 +78,15 @@
     <ClInclude Include="list_traverse.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="list_disordered.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_search.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_selectMax.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

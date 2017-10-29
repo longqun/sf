@@ -1,23 +1,20 @@
 #pragma once
 
-
 template<typename T>
-inline ListNodePos(T) List<T>::find(T const & var, int n, ListNodePos(T) pos)
+inline ListNodePos(T) List<T>::selectMax(ListNodePos(T) pos, int n)
 {
-	//assert(n>0);
-	while (n-- > 0)
+	ListNodePos(T) max = pos;
+	for (int i = 0; i < n - 1; i++)
 	{
-		if (var == pos->data_)
-			break;
-		pos = pos->pre_;
+		pos = pos->next_;
+		if (max->data_ < pos->data_)
+			max = pos;
 	}
-	return pos;
+	return max;
 }
 
-
 template<typename T>
-inline ListNodePos(T) List<T>::find(T const & var)
+inline ListNodePos(T) List<T>::selectMax()
 {
-
-	return find(var, size_, last());
+	return selectMax(first(), size_);
 }
