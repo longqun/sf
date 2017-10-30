@@ -7,16 +7,15 @@ inline ListNodePos(T) List<T>::find(T const & var, int n, ListNodePos(T) pos)
 	while (n-- > 0)
 	{
 		if (var == pos->data_)
-			break;
+			return pos;
 		pos = pos->pre_;
 	}
-	return pos;
+	return n == -1 ? NULL : pos;
 }
 
 
 template<typename T>
 inline ListNodePos(T) List<T>::find(T const & var)
 {
-
 	return find(var, size_, last());
 }

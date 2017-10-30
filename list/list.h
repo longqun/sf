@@ -25,6 +25,8 @@ public:
 
 	void traverse(void(*cb)(T&));
 
+	void rtraverse(void(*cb)(T&));
+
 
 	ListNodePos(T) first()
 	{
@@ -55,6 +57,16 @@ public:
 
 	//统计逆序相邻元素对的总数
 	int disordered() const;
+
+	void deduplicate();
+
+	void reverse();
+
+	void reverseRecurse(ListNodePos(T) curPos, ListNodePos(T) prePos);
+
+	void insertPre(ListNodePos(T) pos, T const &val);
+
+	void insertNext(ListNodePos(T) pos, T const &val);
 protected:
 	void init();
 	int clear();
@@ -67,24 +79,7 @@ private:
 };
 
 
-template<typename T>
-inline ListNodePos(T) List<T>::selectMax(ListNodePos(T) pos, int n)
-{
-	ListNodePos(T) max = pos;
-	for (int i = 0; i < n - 1; i++)
-	{
-		pos = pos->next_;
-		if (max->data_ < pos->data_)
-			max = pos;
-	}
-	return max;
-}
 
-template<typename T>
-inline ListNodePos(T) List<T>::selectMax()
-{
-	return selectMax(first(),size_);
-}
 
 
 

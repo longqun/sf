@@ -24,8 +24,15 @@ int main()
 	{
 		list.push_back(i);
 	}
-	cout << list.find(5)->data_;
+	//cout << list.find(5)->data_;
+	list.push_back(5);
+	list.push_back(5);
+	list.push_back(6);
+	list.push_back(7);
+	list.deduplicate();
+	//list.reverse();
 	//list.traverse(visitCB);
+	list.traverse(visitCB);
 	return 0;
 }
 
