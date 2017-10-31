@@ -22,16 +22,13 @@ int main()
 	List<int>list;
 	for (int i = 0; i < 10; i++)
 	{
-		list.push_back(i);
+		list.push_back(10-i);
 	}
 	//cout << list.find(5)->data_;
-	list.push_back(5);
-	list.push_back(5);
-	list.push_back(6);
-	list.push_back(7);
-	list.deduplicate();
+	
 	//list.reverse();
 	//list.traverse(visitCB);
+	list.sort(List<int>::SELECTIONSORT);
 	list.traverse(visitCB);
 	return 0;
 }

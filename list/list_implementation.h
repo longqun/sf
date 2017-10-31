@@ -10,6 +10,7 @@
 #include "list_init.h"
 #include "list_inserNext.h"
 #include "list_insertPre.h"
+#include "list_uniquify.h"
 #include "list_operator.h"
 #include "list_push_back.h"
 #include "list_push_front.h"

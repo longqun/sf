@@ -3,5 +3,5 @@
 template<typename T>
 inline void List<T>::insertNext(ListNodePos(T) pos, T const & val)
 {
-	pos->insertAsNext(pos, val);
+	pos->insertAsNext( val);
 }

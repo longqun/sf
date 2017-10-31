@@ -7,6 +7,13 @@ template<typename T>
 class List
 {
 public:
+	enum SORTMETHOD
+	{
+		INSERTSORT = 0,
+		SELECTIONSORT = 1,
+		MERGESORT = 2
+	};
+
 	Rank size() { return size_; }
 	bool empty() { return size_ == 0 ? true : false; }
 
@@ -59,6 +66,8 @@ public:
 	int disordered() const;
 
 	void deduplicate();
+	//sorted deduplicate
+	int uniquify();
 
 	void reverse();
 
@@ -67,6 +76,16 @@ public:
 	void insertPre(ListNodePos(T) pos, T const &val);
 
 	void insertNext(ListNodePos(T) pos, T const &val);
+
+	void sort(SORTMETHOD choice = MERGESORT);
+
+	void sort(ListNodePos(T) pos, int n, SORTMETHOD choice);
+
+	void insertSort(ListNodePos(T) pos, int n);
+
+	void selectionSort(ListNodePos(T) pos, int n);
+
+	void mergeSort(ListNodePos(T) pos, int n);
 protected:
 	void init();
 	int clear();
@@ -83,5 +102,10 @@ private:
 
 
 
+template<typename T>
+inline void List<T>::mergeSort(ListNodePos(T) pos, int n)
+{
+
+}
 #include "list_implementation.h"
 
