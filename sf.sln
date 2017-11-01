@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sf", "sf\sf.vcxproj", "{CAE
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "list", "list\list.vcxproj", "{7BD37EFB-2A4A-42CA-9419-7EB579CF0D81}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "queue", "queue\queue.vcxproj", "{3A23D988-577E-4014-BBB4-12C5F9B5BE40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{7BD37EFB-2A4A-42CA-9419-7EB579CF0D81}.Release|x64.Build.0 = Release|x64
 		{7BD37EFB-2A4A-42CA-9419-7EB579CF0D81}.Release|x86.ActiveCfg = Release|Win32
 		{7BD37EFB-2A4A-42CA-9419-7EB579CF0D81}.Release|x86.Build.0 = Release|Win32
+		{3A23D988-577E-4014-BBB4-12C5F9B5BE40}.Debug|x64.ActiveCfg = Debug|x64
+		{3A23D988-577E-4014-BBB4-12C5F9B5BE40}.Debug|x64.Build.0 = Debug|x64
+		{3A23D988-577E-4014-BBB4-12C5F9B5BE40}.Debug|x86.ActiveCfg = Debug|Win32
+		{3A23D988-577E-4014-BBB4-12C5F9B5BE40}.Debug|x86.Build.0 = Debug|Win32
+		{3A23D988-577E-4014-BBB4-12C5F9B5BE40}.Release|x64.ActiveCfg = Release|x64
+		{3A23D988-577E-4014-BBB4-12C5F9B5BE40}.Release|x64.Build.0 = Release|x64
+		{3A23D988-577E-4014-BBB4-12C5F9B5BE40}.Release|x86.ActiveCfg = Release|Win32
+		{3A23D988-577E-4014-BBB4-12C5F9B5BE40}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -102,6 +102,15 @@
     <ClInclude Include="list_uniquify.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="list_sort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_insertSort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="list_selectionSort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

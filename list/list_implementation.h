@@ -19,3 +19,6 @@
 #include "list_selectMax.h"
 #include "list_valid.h"
 #include "list_traverse.h"
+#include "list_sort.h"
+#include "list_selectionSort.h"
+#include "list_insertSort.h"

@@ -77,7 +77,7 @@ public:
 
 	void insertNext(ListNodePos(T) pos, T const &val);
 
-	void sort(SORTMETHOD choice = MERGESORT);
+	void sort(SORTMETHOD choice);
 
 	void sort(ListNodePos(T) pos, int n, SORTMETHOD choice);
 
@@ -85,7 +85,9 @@ public:
 
 	void selectionSort(ListNodePos(T) pos, int n);
 
-	void mergeSort(ListNodePos(T) pos, int n);
+	void mergeSort(ListNodePos(T) &pos, int n);
+
+	void merge(ListNodePos(T)&p, int n, List<T>&l, ListNodePos(T) q, int m);
 protected:
 	void init();
 	int clear();
@@ -102,10 +104,41 @@ private:
 
 
 
-template<typename T>
-inline void List<T>::mergeSort(ListNodePos(T) pos, int n)
-{
 
-}
 #include "list_implementation.h"
 
+template<typename T>
+inline void List<T>::mergeSort(ListNodePos(T)& p, int n)
+{
+	if (n < 2)
+		return;
+	int m = n >> 1;
+	ListNodePos(T) q = p;
+	for (int i = 0; i < m; i++)
+		q = q->next_;
+	mergeSort(p, m);
+	mergeSort(q, n - m);
+	merge(p, m, *this, q, n - m);
+}
+
+template<typename T>
+inline void List<T>::merge(ListNodePos(T)& p, int n, List<T>& l, ListNodePos(T)q, int m)
+{
+	ListNodePos(T) pp = p->pre_;;
+	while (0 < m)
+	{
+		if (0 < n&&p->data_ <= q->data_)
+		{
+			if (q == (p = p->next_))
+				break;
+			n--;
+		}
+		else
+		{
+			q = q->next_;
+			insertPre(p, l.remove(q->pre_)); 
+			m--;
+		}
+	}
+	p = pp->next_;
+}

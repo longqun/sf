@@ -28,7 +28,7 @@ int main()
 	
 	//list.reverse();
 	//list.traverse(visitCB);
-	list.sort(List<int>::SELECTIONSORT);
+	list.sort(List<int>::MERGESORT);
 	list.traverse(visitCB);
 	return 0;
 }
