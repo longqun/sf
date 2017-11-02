@@ -51,8 +51,36 @@ public:
 	Rank insert(Rank r, T const& val);
 
 	void traverse(void(*cb)(T const&));
+
+	Rank search(T const &e) { return size_ <= 0 ? -1 : search(e, 0, size_;) };
+
+	Rank search(T const& e, Rank lo, Rank hi);
+
+	void unsort() { unsort(0, size_); };
+
+	void unsort(Rank lo, Rank hi);
+
+	//unsorted
+	int deduplicate();
+
+	//sorted
+	int uniquify();
+
+	void sort(int method);
+
+	void sort(Rank lo, Rank hi);
 };
 
+template<typename T>
+inline void Vector<T>::sort(int method)
+{
+	sort(0, size_);
+}
+
+template<typename T>
+inline void Vector<T>::sort(Rank lo, Rank hi)
+{
+}
 
 
 
