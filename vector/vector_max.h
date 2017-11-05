@@ -13,3 +13,9 @@ inline Rank Vector<T>::max(Rank lo, Rank hi)
 	}
 	return mx;
 }
+
+template<typename T>
+inline Rank Vector<T>::max()
+{
+	return max(0, size_);
+}

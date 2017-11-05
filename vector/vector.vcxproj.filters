@@ -60,6 +60,21 @@
     <ClInclude Include="vector_traverse.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="vector_search..h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vector_unsort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vector_uniquify.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vector_deduplicate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vector_sort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

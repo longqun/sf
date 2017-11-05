@@ -16,6 +16,18 @@ protected:
 	void expand();
 	void shrink();
 
+	void selectionSort(Rank lo, Rank hi);
+
+	void bubbleSort(Rank lo, Rank hi);
+
+	bool bubble(Rank lo, Rank hi);
+
+	void mergeSort(Rank lo, Rank hi);
+
+	void merge(Rank lo, Rank mid, Rank hi);
+
+	Rank max();
+
 public:
 	Vector(int capacity = DEFAULT_CAPACITY, int size = 0, T val = 0);
 	Vector(T const * a, int n);
@@ -27,6 +39,8 @@ public:
 	{
 		delete elem_;
 	}
+
+
 
 	Rank size() { return size_; }
 
@@ -71,18 +85,25 @@ public:
 	void sort(Rank lo, Rank hi);
 };
 
-template<typename T>
-inline void Vector<T>::sort(int method)
+
+template<typename T>static Rank binSearch(T *data, T const &val, Rank lo, Rank hi)
 {
-	sort(0, size_);
+	while (lo < hi)
+	{
+		Rank mid = (lo + hi) >> 1;
+		if (data[mid] > val)
+		{
+			lo = mid + 1;
+		}
+		else if (data[mid] < val)
+		{
+			hi = mid;
+		}
+		else
+			return mid;
+	}
+	return -1;
 }
-
-template<typename T>
-inline void Vector<T>::sort(Rank lo, Rank hi)
-{
-}
-
-
 
 
 

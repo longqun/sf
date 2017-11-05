@@ -145,6 +145,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="vector_deduplicate.h" />
     <ClInclude Include="vector_insert.h" />
     <ClInclude Include="vector_max.h" />
     <ClInclude Include="vector_operator.h" />
@@ -157,8 +158,12 @@
     <ClInclude Include="vector_find.h" />
     <ClInclude Include="vector_implementation.h" />
     <ClInclude Include="vector_remove.h" />
+    <ClInclude Include="vector_search..h" />
     <ClInclude Include="vector_shrink.h" />
+    <ClInclude Include="vector_sort.h" />
     <ClInclude Include="vector_traverse.h" />
+    <ClInclude Include="vector_uniquify.h" />
+    <ClInclude Include="vector_unsort.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

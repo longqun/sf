@@ -15,9 +15,19 @@ void visitCb(T const& val)
 int main()
 {
 	Vector<int> vec;
-	for (int i = 0; i < 10; i++)
+	/*vec.insert(6);
+	vec.insert(3);
+	vec.insert(4);
+	vec.insert(7);
+	vec.insert(1);
+	vec.insert(5);
+	vec.insert(8);
+	vec.insert(4);*/
+	for (int i = 10; i > 0; i--)
+	{
 		vec.insert(i);
-	vec.remove(0);
+	}
+	vec.sort(2);
 	vec.traverse(visitCb);
     return 0;
 }
