@@ -1,6 +1,7 @@
 #pragma once
 #include "binary-node.h"
 #include "../stack/stack.h"
+#include "binary-define.h"
 
 template<typename T>
 class BinaryTree
@@ -69,56 +70,12 @@ public:
 			root_->travelPostOrder(visit);
 	}
 
-
+	// remove ths pos and child
 	int remove(BinaryNodePos(T) pos);
 
 };
 
-template<typename T>
-inline int BinaryTree<T>::remove(BinaryNodePos(T) pos)
-{
-	/*
-	if (pos == NULL)
-		return 0;
-	int left = remove(pos->left_);
-	int right = remove(pos->right_);
-	delete pos;
-	return left + right + 1;
-	*/
-
-	int ret = 0;
-	if (pos != NULL)
-		s.push(pos);
-	while (!s.empty())
-	{
-		pos = s.pop();
-		if (pos->left_)
-			s.push(pos->left_);
-		if (pos->right_)
-			s.push(pos->right_);
-		delete pos;
-	}
-	return ret;
-}
 
 
 
 
-template<typename T>
-inline BinaryNodePos(T) BinaryTree<T>::attachAsLeft(BinaryNodePos(T) pos, BinaryTree<T>*& t)
-{
-	if (pos->left_ = t->root_)
-		t->root_->parent_ = pos;
-	size_ += t->size_;
-	t->root_ = NULL;
-	t->size_ = NULL;
-	release(t);
-	t = NULL;
-	return pos;
-}
-
-template<typename T>
-inline BinaryNodePos(T) BinaryTree<T>::attachAsRight(BinaryNodePos(T) pos, BinaryTree<T>*& t)
-{
-	return BinaryNodePos(T)();
-}
