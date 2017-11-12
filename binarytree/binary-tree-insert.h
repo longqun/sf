@@ -5,7 +5,7 @@ template<typename T>
 inline BinaryNodePos(T) BinaryTree<T>::insertAsRoot(const T & val)
 {
 	size_++;
-	return root_ = new BinaryNode(val);
+	return root_ = new BinaryNode<T>(val);
 }
 
 template<typename T>

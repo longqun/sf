@@ -22,7 +22,7 @@ inline BinaryNodePos(T) BinaryTree<T>::attachAsRight(BinaryNodePos(T) pos, Binar
 		t->root_->parent_ = pos;
 	size_ += t->size_;
 	updateHeightAbove(pos);
-	t->root = NULL;
+	t->root_ = NULL;
 	t->size_ = NULL;
 	delete t;
 	t = NULL;

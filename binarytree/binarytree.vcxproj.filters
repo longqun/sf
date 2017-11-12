@@ -24,12 +24,54 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="binary-node.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="binary-node-insert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="binary-node-traverse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="binary-tree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="binary-tree-insert.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="binary-tree-updateHeight.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tree-traverse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="binary-define.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="binary-tree-remove.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="binary-tree-attack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="binary-tree-secede.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="binary-tree-visit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="binary-tree-implementation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="binary-node-implementation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="binarytree.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

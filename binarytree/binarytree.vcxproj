@@ -145,11 +145,25 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="binary-define.h" />
+    <ClInclude Include="binary-node-implementation.h" />
+    <ClInclude Include="binary-node-insert.h" />
+    <ClInclude Include="binary-node-traverse.h" />
+    <ClInclude Include="binary-node.h" />
+    <ClInclude Include="binary-tree-attack.h" />
+    <ClInclude Include="binary-tree-implementation.h" />
+    <ClInclude Include="binary-tree-insert.h" />
+    <ClInclude Include="binary-tree-remove.h" />
+    <ClInclude Include="binary-tree-secede.h" />
+    <ClInclude Include="binary-tree-updateHeight.h" />
+    <ClInclude Include="binary-tree-visit.h" />
+    <ClInclude Include="binary-tree.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="tree-traverse.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="binarytree.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

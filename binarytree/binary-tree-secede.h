@@ -11,7 +11,7 @@ inline BinaryTree<T>* BinaryTree<T>::secode(BinaryNodePos(T) pos)
 	updateHeightAbove(pos->parent_);
 	BinaryTree<T>* retTree = new BinaryTree<T>();
 	retTree->root_ = pos;
-	retTree->size_ = pos->size_;
+	retTree->size_ = size_;
 	size_ -= retTree->size_;
 	return retTree;
 }

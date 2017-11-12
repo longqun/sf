@@ -1,11 +1,11 @@
 #pragma once
 
 
-#define IsRoot(x) ((x)&&(!(x).parent_))
+#define IsRoot(x) ((x)&&(!(x)->parent_))
 
 #define IsLeftChild(x) ((x)&&!(IsRoot(x))&&(x)->parent_->left_==(x))
 
-#define IsRightChild(x) ((x)&&!IsRoot(x)&&(x)->parent->right_==(x))
+#define IsRightChild(x) ((x)&&!IsRoot(x)&&(x)->parent_->right_==(x))
 
 #define HasParent(x) ((x)&&(x)->parent_)
 
@@ -21,4 +21,4 @@
 
 #define sibling(p) (IsLeftChild(p)?(p)->parent_->right_:(p)->parent_->left)
 
-#define FromParentTo(x) (IsRoot(x)?root_:(IsLeftChild(x):x->parent_->left_:x->parent_->right))
+#define FromParentTo(x) (IsRoot(x)?root_:(IsLeftChild(x)?(x)->parent_->left_:(x)->parent_->right_))

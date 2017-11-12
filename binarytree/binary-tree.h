@@ -1,7 +1,9 @@
 #pragma once
 #include "binary-node.h"
-#include "../stack/stack.h"
 #include "binary-define.h"
+#include "binary-tree-visit.h"
+
+
 
 template<typename T>
 class BinaryTree
@@ -10,17 +12,23 @@ protected:
 	int size_;
 	BinaryNodePos(T) root_;
 	//update pos height
-	virtual int updateHeight(BinaryNodePos(T) pos);
+	int updateHeight(BinaryNodePos(T) pos);
 	void updateHeightAbove(BinaryNodePos(T) pos);
 
 public:
-	BinaryTree() :size_ = 0, root_ = NULL
+
+
+	BinaryTree() :size_(0), root_(NULL)
 	{}
 
-		~BinaryTree()
+	~BinaryTree()
 	{
 		if (size_ > 0)
+		{
 			remove(root_);
+		}
+
+		//remove(root_);
 	}
 
 	int size() { return size_; }
@@ -52,8 +60,7 @@ public:
 	template<typename VST>
 	void travePreOrder(VST&visit)
 	{
-		if (root_)
-			root_->travelPreOder(visit);
+		traverPre_Func2(root_, visit);
 	}
 
 	template<typename VST>
@@ -71,11 +78,14 @@ public:
 	}
 
 	// remove ths pos and child
+	//pos is valid
 	int remove(BinaryNodePos(T) pos);
 
 };
 
 
+
+#include "binary-tree-implementation.h"
 
 
 

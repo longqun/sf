@@ -3,7 +3,6 @@
 #define NULL nullptr
 #endif // ! NULL
 
-#include "stdlib.h"
 
 #define BinaryNodePos(T) BinaryNode<T>*
 #define stature(p) ((p)?(p)->height:-1)
@@ -24,7 +23,7 @@ struct BinaryNode
 	BinaryNode() :parent_(NULL), left_(NULL), right_(NULL), height_(0), npl_(1), color_(RB_RED)
 	{}
 
-	BinaryNode(T val, BinaryNodePos(T) p = NULL, BinaryNodePos(T) l = NULL, BinaryNodePos(T)r = NULL, int h = 1, int l = 1, RBColor c = RB_RED) :data_(val), parent_(p), left_(l), right_(r), height_(h), npl_(l), color_(c)
+	BinaryNode(T val, BinaryNodePos(T) p = NULL, BinaryNodePos(T) l = NULL, BinaryNodePos(T)r = NULL, int h = 1, int npl = 1, RBColor c = RB_RED) :data_(val), parent_(p), left_(l), right_(r), height_(h), npl_(npl), color_(c)
 	{
 	}
 
@@ -46,3 +45,15 @@ struct BinaryNode
 
 
 
+template<typename T>
+inline int BinaryNode<T>::size()
+{
+	int s = 1;
+	if (left)
+		s += left_->size();
+	if (right_)
+		s += right_->size();
+	return s;
+}
+
+#include "binary-node-implementation.h"
