@@ -38,13 +38,14 @@ int main()
 	BinaryNodePos(char) o = bt.insertAsLeft(p, 'o');
 
 
-	BinaryTree<char>* bt1 = new BinaryTree<char>;
+	/*BinaryTree<char>* bt1 = new BinaryTree<char>;
 	bt1->insertAsRoot('z');
 
 	bt.attachAsRight(b, bt1);
 
 	bt.secode(l)->travePreOrder(visit);
-	
+	*/
+	bt.travePostOrder(visit);
 	return 0;
 }
 

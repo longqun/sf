@@ -1,9 +1,21 @@
 #include "binary-node.h"
 #pragma once
+#include "../queue/queue.h"
 template<typename T>
 template<typename VST>
 inline void BinaryNode<T>::travelLevel(VST &)
 {
+	Queue<BinaryNodePos(T)>q;
+	q.enqueue(this);
+	while (!q.empty())
+	{
+		BinaryNodePos(T) cur = q.dequeue();
+		visit(cur->data_);
+		if (cur->left_)
+			q.enqueue(cur->left_);
+		if (cur->right_)
+			q.enqueue(cur->right_);
+	}
 }
 template<typename T>
 template<typename VST>

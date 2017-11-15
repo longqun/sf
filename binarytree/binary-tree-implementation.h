@@ -5,3 +5,4 @@
 #include "binary-tree-remove.h"
 #include "binary-tree-secede.h"
 #include "binary-tree-visit.h"
+#include "binary-node-succ.h"

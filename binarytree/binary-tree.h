@@ -66,16 +66,15 @@ public:
 	template<typename VST>
 	void traveInOrder(VST&visit)
 	{
-		if (root_)
-			root_->travelInOrder(visit);
+		traverInorder_Func2(root_,visit);
 	}
 
 	template<typename VST>
 	void travePostOrder(VST&visit)
 	{
-		if (root_)
-			root_->travelPostOrder(visit);
+		traverPostRrder_Func(root_, visit);
 	}
+
 
 	// remove ths pos and child
 	//pos is valid

@@ -56,4 +56,6 @@ inline int BinaryNode<T>::size()
 	return s;
 }
 
+
+
 #include "binary-node-implementation.h"

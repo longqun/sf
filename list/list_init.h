@@ -3,8 +3,8 @@
 template<typename T>
 void List<T>::init()
 {
-	header_ = new ListNode<T>(INT_MIN);
-	trailer_ = new ListNode<T>(INT_MIN);
+	header_ = new ListNode<T>();
+	trailer_ = new ListNode<T>();
 	header_->next_ = trailer_;
 	trailer_->pre_ = header_;
 	size_ = 0;
