@@ -29,43 +29,44 @@ static void traverPre_Func1(BinaryNodePos(T) pos, VST& visit)
 {
 	while (true)
 	{
-		while (pos)
+		if (!pos)
+			return;
+		while (pos&&pos->left_)
 		{
 			visit(pos->data_);
-			if (pos->left_ != NULL)
-				pos = pos->left_;
-			else if (pos->right_ != NULL)
+			pos = pos->left_;
+		}
+		visit(pos->data_);
+		if (pos->right_)
+		{
+			pos = pos->right_;
+		}
+		else
+		{
+			bool found = false;
+			BinaryNodePos(T) pre = NULL;
+			while (!found)
 			{
-				pos = pos->right_;
-			}
-			else
-			{
-				if (IsRightChild(pos))
+				pre = pos;
+				pos = pos->parent_;
+				if (pos == NULL)
+					return;
+				if (pos->right_ == pre)
 				{
-					pos = pos->parent_->parent_;
-					while (pos&&pos->right_ == NULL)
-						pos = pos->parent_;
-					if (pos)
-						pos = pos->right_;
 				}
-				else if (IsLeftChild(pos))
+				else if (pos->left_ == pre)
 				{
-					while (pos)
+					if (pos->right_ != NULL)
 					{
-						if (pos->parent_->right_)
-						{
-							pos = pos->parent_->right_;
-							break;
-						}
-						else
-						{
-							pos = pos->parent_;
-						}
+						pos = pos->right_;
+						found = true;
 					}
 				}
 			}
-
 		}
+
+
+
 	}
 };
 
@@ -132,7 +133,7 @@ static void traverPostRrder_Func(BinaryNodePos(T) pos, VST& visit)
 	Stack<BinaryNodePos(T)>s;
 	if (pos)
 		s.push(pos);
-	
+
 	while (!s.empty())
 	{
 		if (s.top() != pos->parent_)

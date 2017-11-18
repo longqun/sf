@@ -45,7 +45,7 @@ int main()
 
 	bt.secode(l)->travePreOrder(visit);
 	*/
-	bt.travePostOrder(visit);
+	bt.travePreOrder(visit);
 	return 0;
 }
 

@@ -60,7 +60,7 @@ public:
 	template<typename VST>
 	void travePreOrder(VST&visit)
 	{
-		traverPre_Func2(root_, visit);
+		traverPre_Func1(root_, visit);
 	}
 
 	template<typename VST>
