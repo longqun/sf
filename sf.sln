@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "stack", "stack\stack.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "binarytree", "binarytree\binarytree.vcxproj", "{CB1AB85B-83CE-4977-9D3B-C21F943D854A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bitmap", "bitmap\bitmap.vcxproj", "{5DECD2A8-3635-4612-B86A-0638DB8188C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{CB1AB85B-83CE-4977-9D3B-C21F943D854A}.Release|x64.Build.0 = Release|x64
 		{CB1AB85B-83CE-4977-9D3B-C21F943D854A}.Release|x86.ActiveCfg = Release|Win32
 		{CB1AB85B-83CE-4977-9D3B-C21F943D854A}.Release|x86.Build.0 = Release|Win32
+		{5DECD2A8-3635-4612-B86A-0638DB8188C6}.Debug|x64.ActiveCfg = Debug|x64
+		{5DECD2A8-3635-4612-B86A-0638DB8188C6}.Debug|x64.Build.0 = Debug|x64
+		{5DECD2A8-3635-4612-B86A-0638DB8188C6}.Debug|x86.ActiveCfg = Debug|Win32
+		{5DECD2A8-3635-4612-B86A-0638DB8188C6}.Debug|x86.Build.0 = Debug|Win32
+		{5DECD2A8-3635-4612-B86A-0638DB8188C6}.Release|x64.ActiveCfg = Release|x64
+		{5DECD2A8-3635-4612-B86A-0638DB8188C6}.Release|x64.Build.0 = Release|x64
+		{5DECD2A8-3635-4612-B86A-0638DB8188C6}.Release|x86.ActiveCfg = Release|Win32
+		{5DECD2A8-3635-4612-B86A-0638DB8188C6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
