@@ -13,6 +13,6 @@ inline Vector<T>& Vector<T>::operator=(Vector<T> const & vec)
 {
 	if (elem_)
 		delete elem_;
-	copyFrom(vec.elem_, 0, size_);
+	copyFrom(vec.elem_, 0, vec.size_);
 	return *this;
 }
