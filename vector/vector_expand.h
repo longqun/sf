@@ -13,5 +13,5 @@ inline void Vector<T>::expand()
 	{
 		elem_[i] = oldElem[i];
 	}
-	delete oldElem;
+	delete []oldElem;
 }

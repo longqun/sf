@@ -3,6 +3,7 @@
 #include "../vector/vector.h"
 #include "../graph/graph.h"
 #include "limits.h"
+#include "../queue/queue.h"
 
 template <typename Tv>
 struct Vertex
@@ -129,8 +130,8 @@ public:
 
 	virtual int nextNbr(int i, int j)
 	{
-		while (j > -1 && exists(i, --j));
-		return j;
+		while (j > -1 && !exists(i, --j));
+			return j;
 	}
 
 	virtual bool exists(int i, int j)
@@ -158,4 +159,50 @@ public:
 		vertexList_[j].inDegree_--;
 		return ret;
 	}
+
+	//whole bfs
+	void bfs(int start)
+	{
+		int cur = start;
+		reset();
+		int time = 0;
+		do
+		{
+			if (status(cur) == UNDISCOVERED)
+				BFS(cur, time);
+		} while (start != (cur = (++cur%n)));
+	}
+
+	//one bfs
+	void BFS(int start, int& time)
+	{
+		printf("begin BFS \n");
+		Queue<int> q;
+		q.enqueue(start);
+		status(start) = DISCOVERED;
+		printf("visit <<%c  \n", vertex(start));
+		while (!q.empty())
+		{
+			int ver = q.dequeue();
+			dTime(ver) = ++time;
+			for (int nextVer = firstNbr(ver); nextVer > -1; nextVer = nextNbr(ver, nextVer))
+			{
+				if (status(nextVer) == UNDISCOVERED)
+				{
+					q.enqueue(nextVer);
+					status(nextVer) = DISCOVERED;
+					printf("visit <<%c  \n", vertex(nextVer));
+					parent(nextVer) = ver;
+					type(ver, nextVer) = TREE;
+				}
+				else
+				{
+					type(ver, nextVer) = CROSS;
+				}
+			}
+			status(ver) = VISITED;
+		}
+		printf("end BFS \n");
+	}
+	
 };
