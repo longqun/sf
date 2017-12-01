@@ -37,7 +37,7 @@ int main()
 	grap.insert(0, 0, 7, 3);
 
 	int i = 0;
-	grap.bfs(7);
+	grap.dfs(7);
     return 0;
 }
 

@@ -131,7 +131,7 @@ public:
 	virtual int nextNbr(int i, int j)
 	{
 		while (j > -1 && !exists(i, --j));
-			return j;
+		return j;
 	}
 
 	virtual bool exists(int i, int j)
@@ -204,5 +204,66 @@ public:
 		}
 		printf("end BFS \n");
 	}
-	
+
+	void dfs(int s)
+	{
+		reset();
+		int time = 0;
+		int v = s;
+
+		do
+		{
+			if (status(v) == UNDISCOVERED)
+			{
+				DFS(v, time);
+			}
+		} while (s != (v = (++v) % n));
+
+	}
+
+	void DFS(int start, int& time)
+	{
+		printf("begin BFS\n");
+		Stack<int>s;
+		status(start) = DISCOVERED;
+		s.push(start);
+		printf("dfs << %c \n", vertex(start));
+		dTime(start) = ++time;
+		while (!s.empty())
+		{
+			int top = s.top();
+			bool found = false;
+			for (int u = firstNbr(top); u > -1; u = nextNbr(top, u))
+			{
+				if (status(u) == UNDISCOVERED)
+				{
+					status(u) = DISCOVERED;
+					s.push(u);
+					parent(u) = top;
+					printf("dfs << %c \n", vertex(u));
+					found = true;;
+					type(top, u) = TREE;
+					break;
+				}
+				else if (status(u) == DISCOVERED)
+				{
+					type(top, u) = BACKWARD;
+				}
+				else if (status(u) == VISITED)
+				{
+					type(top, u) = (dTime(top) < dTime(u) ? FORWARD : CROSS);
+				}
+			}
+
+			if (!found)
+			{
+				status(top) = VISITED;
+				fTime(top) = ++time;
+				s.pop();
+			}
+
+		}
+		printf("end BFS\n");
+	}
+
 };
