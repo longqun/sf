@@ -266,4 +266,68 @@ public:
 		printf("end BFS\n");
 	}
 
+	//DFS stack is the tsort order
+	void tSort(int s)
+	{
+		Stack<Tv>vertexStack;
+		reset();
+		int time = 0;
+		int v = s;
+
+		do
+		{
+			if (status(v) == UNDISCOVERED)
+			{
+				TSort(v, time, &vertexStack);
+			}
+		} while (s != (v = (++v) % n));
+		for (int i = 0; i < vertexStack.size(); i++)
+		{
+			printf("the vertex is %c \n", vertex(vertexStack[i]));
+		}
+	}
+
+	void TSort(int start, int &time, Stack<Tv>*vertexStack)
+	{
+		Stack<int>s;
+		status(start) = DISCOVERED;
+		s.push(start);
+		dTime(start) = ++time;
+		while (!s.empty())
+		{
+			int top = s.top();
+			bool found = false;
+			for (int u = firstNbr(top); u > -1; u = nextNbr(top, u))
+			{
+				if (status(u) == UNDISCOVERED)
+				{
+					status(u) = DISCOVERED;
+					s.push(u);
+					parent(u) = top;
+					found = true;;
+					type(top, u) = TREE;
+					break;
+				}
+				else if (status(u) == DISCOVERED)
+				{
+					type(top, u) = BACKWARD;
+				}
+				else if (status(u) == VISITED)
+				{
+					type(top, u) = (dTime(top) < dTime(u) ? FORWARD : CROSS);
+				}
+			}
+
+			if (!found)
+			{
+				status(top) = VISITED;
+				vertexStack->push(top);
+				fTime(top) = ++time;
+				s.pop();
+			}
+
+		}
+
+	}
+
 };
