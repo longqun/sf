@@ -330,4 +330,78 @@ public:
 
 	}
 
+	void pfs(int s, PU prioUpdater)
+	{
+		reset();
+		int v = s;
+		do
+			if (UNDISCOVERED == status(v))
+				PSF(v, prioUpdater);
+		while (s != (v = (++v % n)));
+	}
+
+
+	void PFS(int s, PU prioUpdater)
+	{
+		priority(s) = 0;
+		status(s) = VISITED;
+		parent(s) = -1;
+
+		while (true)
+		{
+			for (int start = firstNbr(s); start != -1; start = nextNbr(s, start))
+				prioUpdater(this, s, start);
+			//for reset it only traver the visit pos neighbor
+			for (int shortest = INT_MAX; w = 0, w < n; w++)
+			{
+				if (UNDISCOVERED == status(w))
+				{
+					if (shortest > priority(s))
+					{
+						shortest = priority(s);
+						w = s;
+					}
+				}
+			}
+			if (VISITED == status(s))
+				break;
+			status(s) = VISITED;
+			type(parent(s), s) = TREE;
+
+		}
+	}
+};
+
+template <typename Tv, typename Te>
+struct PrimPU
+{
+	virtual void operator()(Graph<Tv, Te>*g, int uk, int v)
+	{
+		if (UNDISCOVERED == g->status(v))
+		{
+			if (g->priority(v) > g->weight(uk, v))
+			{
+				g->priority(v) = g->weight(uk, v);
+				g->parent(v) = uk;
+			}
+		}
+	}
+
+};
+
+template <typename Tv, typename Te>
+struct DijkstraPU
+{
+	virtual void operator()(Graph<Tv, Te>*g, int uk, int v)
+	{
+		if (UNDISCOVERED == g->status(v))
+		{
+			if (g->priority(uk) + g->weight(uk, u) < g->priority(v))
+			{
+				g->priority(v) = g->priority(uk) + g->weight(uk, u);
+				g->parent(v) = uk;
+			}
+		}
+	}
+
 };
