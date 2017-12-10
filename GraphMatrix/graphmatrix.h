@@ -329,18 +329,20 @@ public:
 		}
 
 	}
-
+	
+	template <typename PU>
 	void pfs(int s, PU prioUpdater)
 	{
 		reset();
 		int v = s;
 		do
 			if (UNDISCOVERED == status(v))
-				PSF(v, prioUpdater);
+				PFS(v, prioUpdater);
 		while (s != (v = (++v % n)));
 	}
 
-
+	
+	template <typename PU>
 	void PFS(int s, PU prioUpdater)
 	{
 		priority(s) = 0;
