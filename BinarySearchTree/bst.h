@@ -12,7 +12,9 @@ protected:
 public:
 	virtual BinaryNodePos(T) & search(const T & e);
 	virtual BinaryNodePos(T) insert( const T &e);
-	//virtual bool remove( const T &e);
+	virtual bool remove( const T &e);
+
+
 
 
 };
