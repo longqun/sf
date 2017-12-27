@@ -21,4 +21,5 @@
 
 #define sibling(p) (IsLeftChild(p)?(p)->parent_->right_:(p)->parent_->left)
 
-#define FromParentTo(x) (IsRoot(x)?root_:(IsLeftChild(x)?(x)->parent_->left_:(x)->parent_->right_))
+#define FromParentTo(x)		\
+( IsRoot(x) ? root_ : ( IsLeftChild(x) ? (x)->parent_->left_ : (x)->parent_->right_ ) )

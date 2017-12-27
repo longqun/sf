@@ -10,7 +10,7 @@
 template<typename T>
 inline int BinaryTree<T>::updateHeight(BinaryNodePos(T) pos)
 {
-	return pos->height_ = __max(pos->left_ == NULL ? 0 : pos->left_->height_, pos->right_ == NULL ? 0 : pos->right_->height_) + 1;
+	return pos->height_ = __max(stature(pos->left_),stature(pos->right_)) + 1;
 }
 
 template<typename T>

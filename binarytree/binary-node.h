@@ -5,7 +5,7 @@
 
 
 #define BinaryNodePos(T) BinaryNode<T>*
-#define stature(p) ((p)?(p)->height:-1)
+#define stature(p) ((p)?(p)->height_:-1)
 typedef enum { RB_RED, RB_BLACK }RBColor;
 
 template <typename T>
@@ -23,7 +23,7 @@ struct BinaryNode
 	BinaryNode() :parent_(NULL), left_(NULL), right_(NULL), height_(0), npl_(1), color_(RB_RED)
 	{}
 
-	BinaryNode(T val, BinaryNodePos(T) p = NULL, BinaryNodePos(T) l = NULL, BinaryNodePos(T)r = NULL, int h = 1, int npl = 1, RBColor c = RB_RED) :data_(val), parent_(p), left_(l), right_(r), height_(h), npl_(npl), color_(c)
+	BinaryNode(T val, BinaryNodePos(T) p = NULL, BinaryNodePos(T) l = NULL, BinaryNodePos(T)r = NULL, int h = 0 , int npl = 1, RBColor c = RB_RED) :data_(val), parent_(p), left_(l), right_(r), height_(h), npl_(npl), color_(c)
 	{
 	}
 
