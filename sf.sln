@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinarySearchTree", "BinaryS
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "avl", "avl\avl.vcxproj", "{2E7A030C-F16C-4A57-89E4-2EEF409AAFD5}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SPlay", "SPlay\SPlay.vcxproj", "{A218DF24-8E95-48A8-9A44-2C2C3E5A3749}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -121,6 +123,14 @@ Global
 		{2E7A030C-F16C-4A57-89E4-2EEF409AAFD5}.Release|x64.Build.0 = Release|x64
 		{2E7A030C-F16C-4A57-89E4-2EEF409AAFD5}.Release|x86.ActiveCfg = Release|Win32
 		{2E7A030C-F16C-4A57-89E4-2EEF409AAFD5}.Release|x86.Build.0 = Release|Win32
+		{A218DF24-8E95-48A8-9A44-2C2C3E5A3749}.Debug|x64.ActiveCfg = Debug|x64
+		{A218DF24-8E95-48A8-9A44-2C2C3E5A3749}.Debug|x64.Build.0 = Debug|x64
+		{A218DF24-8E95-48A8-9A44-2C2C3E5A3749}.Debug|x86.ActiveCfg = Debug|Win32
+		{A218DF24-8E95-48A8-9A44-2C2C3E5A3749}.Debug|x86.Build.0 = Debug|Win32
+		{A218DF24-8E95-48A8-9A44-2C2C3E5A3749}.Release|x64.ActiveCfg = Release|x64
+		{A218DF24-8E95-48A8-9A44-2C2C3E5A3749}.Release|x64.Build.0 = Release|x64
+		{A218DF24-8E95-48A8-9A44-2C2C3E5A3749}.Release|x86.ActiveCfg = Release|Win32
+		{A218DF24-8E95-48A8-9A44-2C2C3E5A3749}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
