@@ -19,10 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A218DF24-8E95-48A8-9A44-2C2C3E5A3749}</ProjectGuid>
+    <ProjectGuid>{D93BC4E4-41D3-4592-A29C-871E1FF1CBE0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>SPlay</RootNamespace>
+    <RootNamespace>directory</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>Dictionary</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -145,17 +146,13 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="splay.h" />
-    <ClInclude Include="splay_implementation.h" />
-    <ClInclude Include="splay_insert.h" />
-    <ClInclude Include="splay_remove.h" />
-    <ClInclude Include="splay_search.h" />
-    <ClInclude Include="splay_splay.h" />
+    <ClInclude Include="Dictionary.h" />
+    <ClInclude Include="entry.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="directory.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

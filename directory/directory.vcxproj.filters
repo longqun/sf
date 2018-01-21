@@ -24,22 +24,10 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="splay.h">
+    <ClInclude Include="entry.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="splay_splay.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="splay_search.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="splay_insert.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="splay_remove.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="splay_implementation.h">
+    <ClInclude Include="Dictionary.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -47,7 +35,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="directory.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

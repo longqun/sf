@@ -24,22 +24,16 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="splay.h">
+    <ClInclude Include="skiplist.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="splay_splay.h">
+    <ClInclude Include="entry.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="splay_search.h">
+    <ClInclude Include="quadlistnodeh.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="splay_insert.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="splay_remove.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="splay_implementation.h">
+    <ClInclude Include="quadlist.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

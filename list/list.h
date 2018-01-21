@@ -88,6 +88,10 @@ public:
 	void mergeSort(ListNodePos(T) &pos, int n);
 
 	void merge(ListNodePos(T)&p, int n, List<T>&l, ListNodePos(T) q, int m);
+
+	ListNodePos(T) insertAsFirst(const T& e);
+
+	ListNodePos(T) insertAsLast(const T& e);
 protected:
 	void init();
 	int clear();
@@ -141,4 +145,18 @@ inline void List<T>::merge(ListNodePos(T)& p, int n, List<T>& l, ListNodePos(T)q
 		}
 	}
 	p = pp->next_;
+}
+
+template<typename T>
+inline ListNodePos(T) List<T>::insertAsFirst(const T & e)
+{
+	size_++;
+	return header_->insertAsNext(e);
+}
+
+template<typename T>
+inline ListNodePos(T) List<T>::insertAsLast(const T & e)
+{
+	size_++;
+	return trailer_->insertAsPre(e);
 }
