@@ -24,7 +24,7 @@ protected:
 public:
 	Bitmap(int n = 8)
 	{
-		init(8);
+		init(n);
 	}
 
 	Bitmap(char* file, int n = 8)
