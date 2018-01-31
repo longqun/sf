@@ -16,6 +16,10 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
+    <Text Include="F:\sjjgC++\dsa\_input\prime-1048576-bitmap.txt">
+      <Filter>头文件</Filter>
+    </Text>
+    <Text Include="prime-1048576-bitmap.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -24,12 +28,24 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="hashtable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="primeNLT.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Entry.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hashcode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="hashtable.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

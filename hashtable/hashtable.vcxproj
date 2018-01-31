@@ -142,14 +142,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="F:\sjjgC++\dsa\_input\prime-1048576-bitmap.txt" />
+    <Text Include="prime-1048576-bitmap.txt" />
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Entry.h" />
+    <ClInclude Include="hashcode.h" />
+    <ClInclude Include="hashtable.h" />
+    <ClInclude Include="primeNLT.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="hashtable.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
