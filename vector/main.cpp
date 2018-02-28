@@ -27,7 +27,7 @@ int main()
 	{
 		vec.insert(i);
 	}
-	vec.sort(2);
+	vec.sort(3);
 	vec.traverse(visitCb);
     return 0;
 }

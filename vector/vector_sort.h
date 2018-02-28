@@ -1,4 +1,6 @@
+
 #pragma once
+#include "../PQ_ComplHeap/PQ_CompHeap.h"
 template<typename T>
 inline void Vector<T>::sort(int method)
 {
@@ -11,7 +13,11 @@ inline void Vector<T>::sort(int method)
 		selectionSort(0, size_);
 		break;
 	case 2:
-		mergeSort(0,size_);
+		mergeSort(0, size_);
+		break;
+	case 3:
+		heapSort(0, size_);
+		break;
 	default:
 		break;
 	}
@@ -89,5 +95,15 @@ inline void Vector<T>::merge(Rank lo, Rank mid, Rank hi)
 		{
 			elem_[lo++] = elem_[mid++];
 		}
+	}
+}
+
+template<typename T>
+inline void Vector<T>::heapSort(Rank lo, Rank hi)
+{
+	PQ_ComplHeap<T> h(elem_ + lo, hi - lo);
+	while (!h.empty())
+	{
+		elem_[--hi] = h.delMax();
 	}
 }

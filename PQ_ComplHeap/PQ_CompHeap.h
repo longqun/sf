@@ -55,6 +55,15 @@ inline Rank PQ_ComplHeap<T>::percolateUp(Rank i)
 }
 
 template<typename T>
+inline void PQ_ComplHeap<T>::heapify(Rank n)
+{
+	for (int i = LastInternal(n); InHeap(n, i); i--)
+	{
+		percolateDown(n, i);
+	}
+}
+
+template<typename T>
 inline void PQ_ComplHeap<T>::insert(T e)
 {
 	Vector<T>::insert(e);

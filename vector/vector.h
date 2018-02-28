@@ -26,6 +26,8 @@ protected:
 
 	void merge(Rank lo, Rank mid, Rank hi);
 
+	void heapSort(Rank lo, Rank hi);
+
 	Rank max();
 
 public:
