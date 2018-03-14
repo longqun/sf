@@ -28,7 +28,11 @@ protected:
 
 	void heapSort(Rank lo, Rank hi);
 
+	void quickSort(Rank lo, Rank hi);
+
 	Rank max();
+
+	int partition(Rank lo, Rank hi);
 
 public:
 	Vector(int capacity = DEFAULT_CAPACITY, int size = 0, T val = 0);
@@ -39,7 +43,7 @@ public:
 
 	~Vector()
 	{
-		delete []elem_;
+		delete[]elem_;
 	}
 
 
@@ -85,6 +89,7 @@ public:
 	void sort(int method);
 
 	void sort(Rank lo, Rank hi);
+
 };
 
 

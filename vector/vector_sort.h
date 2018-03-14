@@ -1,6 +1,7 @@
 
 #pragma once
 #include "../PQ_ComplHeap/PQ_CompHeap.h"
+#include "vector.h"
 template<typename T>
 inline void Vector<T>::sort(int method)
 {
@@ -18,6 +19,8 @@ inline void Vector<T>::sort(int method)
 	case 3:
 		heapSort(0, size_);
 		break;
+	case 4:
+		quickSort(0, size_);
 	default:
 		break;
 	}
@@ -106,4 +109,37 @@ inline void Vector<T>::heapSort(Rank lo, Rank hi)
 	{
 		elem_[--hi] = h.delMax();
 	}
+}
+
+template<typename T>
+inline void Vector<T>::quickSort(Rank lo, Rank hi)
+{
+	if (hi - lo < 2)
+		return;
+	int m = partition(lo, hi - 1);
+	quickSort(lo, m);
+	quickSort(m + 1, hi);
+}
+
+template<typename T>
+inline int Vector<T>::partition(Rank lo, Rank hi)
+{
+	int value = elem_[lo];
+	while (lo < hi)
+	{
+		while (lo < hi&& elem_[hi] >= value)
+		{
+			hi--;
+		}
+		elem_[lo] = elem_[hi];
+
+		while (lo < hi && elem_[lo] <= value)
+		{
+			lo++;
+		}
+
+		elem_[hi] = elem_[lo];
+	}
+	elem_[lo] = value;
+	return lo;
 }

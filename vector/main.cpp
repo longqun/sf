@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "vector.h"
 #include "iostream"
+
 using  namespace std;
 
 template<typename T>
@@ -27,7 +28,8 @@ int main()
 	{
 		vec.insert(i);
 	}
-	vec.sort(3);
+	//vec.traverse(visitCb);
+	vec.sort(4);
 	vec.traverse(visitCb);
     return 0;
 }
