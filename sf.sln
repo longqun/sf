@@ -35,6 +35,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hashtable", "hashtable\hash
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PQ_ComplHeap", "PQ_ComplHeap\PQ_ComplHeap.vcxproj", "{A2613F4A-AE11-434D-A157-995E592269F4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KMP", "KMP\KMP.vcxproj", "{75EBD0E4-E2B9-4F61-AAAF-0E4F9B330053}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -171,6 +173,14 @@ Global
 		{A2613F4A-AE11-434D-A157-995E592269F4}.Release|x64.Build.0 = Release|x64
 		{A2613F4A-AE11-434D-A157-995E592269F4}.Release|x86.ActiveCfg = Release|Win32
 		{A2613F4A-AE11-434D-A157-995E592269F4}.Release|x86.Build.0 = Release|Win32
+		{75EBD0E4-E2B9-4F61-AAAF-0E4F9B330053}.Debug|x64.ActiveCfg = Debug|x64
+		{75EBD0E4-E2B9-4F61-AAAF-0E4F9B330053}.Debug|x64.Build.0 = Debug|x64
+		{75EBD0E4-E2B9-4F61-AAAF-0E4F9B330053}.Debug|x86.ActiveCfg = Debug|Win32
+		{75EBD0E4-E2B9-4F61-AAAF-0E4F9B330053}.Debug|x86.Build.0 = Debug|Win32
+		{75EBD0E4-E2B9-4F61-AAAF-0E4F9B330053}.Release|x64.ActiveCfg = Release|x64
+		{75EBD0E4-E2B9-4F61-AAAF-0E4F9B330053}.Release|x64.Build.0 = Release|x64
+		{75EBD0E4-E2B9-4F61-AAAF-0E4F9B330053}.Release|x86.ActiveCfg = Release|Win32
+		{75EBD0E4-E2B9-4F61-AAAF-0E4F9B330053}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
