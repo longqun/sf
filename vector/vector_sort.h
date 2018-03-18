@@ -139,6 +139,7 @@ inline int Vector<T>::partition(Rank lo, Rank hi)
 		}
 
 		elem_[hi] = elem_[lo];
+		
 	}
 	elem_[lo] = value;
 	return lo;

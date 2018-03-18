@@ -72,7 +72,7 @@ public:
 
 	void traverse(void(*cb)(T const&));
 
-	Rank search(T const &e) { return size_ <= 0 ? -1 : search(e, 0, size_;) };
+	Rank search(T const &e) { return size_ <= 0 ? -1 : search(e, 0, size_); }
 
 	Rank search(T const& e, Rank lo, Rank hi);
 
