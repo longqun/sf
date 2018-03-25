@@ -24,13 +24,11 @@ int main()
 	vec.insert(5);
 	vec.insert(8);
 	vec.insert(4);*/
-	for (int i = 10; i > 0; i--)
-	{
-		vec.insert(i);
-	}
+	int t[2] = { 1,2 };
+	int a = 2;
+	cout<< binSearch(t, a, 0, 2);
 	//vec.traverse(visitCb);
-	vec.sort(4);
-	vec.traverse(visitCb);
-    return 0;
+	
+	return 0;
 }
 

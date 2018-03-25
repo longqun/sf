@@ -93,24 +93,6 @@ public:
 };
 
 
-template<typename T>static Rank binSearch(T *data, T const &val, Rank lo, Rank hi)
-{
-	while (lo < hi)
-	{
-		Rank mid = (lo + hi) >> 1;
-		if (data[mid] > val)
-		{
-			lo = mid + 1;
-		}
-		else if (data[mid] < val)
-		{
-			hi = mid;
-		}
-		else
-			return mid;
-	}
-	return -1;
-}
 
 
 

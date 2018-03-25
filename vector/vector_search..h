@@ -1,16 +1,27 @@
 #pragma once
 
 
-//[lo,hi)
+//find the closest
+template<typename T>static Rank binSearch(T *data, T const &val, Rank lo, Rank hi)
+{
+	while (lo < hi)
+	{
+		Rank mid = (lo + hi) >> 1;
+		if (data[mid] <= val)
+		{
+			lo = mid + 1;
+		}
+		else if (data[mid] > val)
+		{
+			hi = mid;
+		}
+	}
+	return  --lo;
+}
+
+//[lo,hi) change to bin
 template<typename T>
 inline Rank Vector<T>::search(T const & e, Rank lo, Rank hi)
 {
-	while (hi < lo)
-	{
-		if (elem_[--hi] <= e)
-		{
-			break;
-		}
-	}
-	return hi;
+	return binSearch(elem_, e, lo, hi);
 }
