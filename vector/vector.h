@@ -43,7 +43,7 @@ public:
 
 	~Vector()
 	{
-		delete[]elem_;
+		delete []elem_;
 	}
 
 

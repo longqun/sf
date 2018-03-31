@@ -10,3 +10,4 @@
 #include "vector_max.h"
 #include "vector_traverse.h"
 #include "vector_sort.h"
+#include "vector_search..h"

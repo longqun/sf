@@ -35,4 +35,7 @@
 *.db
 Debug
 ipch
+Release
+
+
 

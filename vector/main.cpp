@@ -16,17 +16,17 @@ void visitCb(T const& val)
 int main()
 {
 	Vector<int> vec;
-	/*vec.insert(6);
+	vec.insert(6);
 	vec.insert(3);
 	vec.insert(4);
 	vec.insert(7);
 	vec.insert(1);
 	vec.insert(5);
 	vec.insert(8);
-	vec.insert(4);*/
+	vec.insert(4);
 	int t[2] = { 1,2 };
 	int a = 2;
-	cout<< binSearch(t, a, 0, 2);
+	vec.search(2);
 	//vec.traverse(visitCb);
 	
 	return 0;

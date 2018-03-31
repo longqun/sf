@@ -7,13 +7,13 @@ template<typename T>static Rank binSearch(T *data, T const &val, Rank lo, Rank h
 	while (lo < hi)
 	{
 		Rank mid = (lo + hi) >> 1;
-		if (data[mid] <= val)
-		{
-			lo = mid + 1;
-		}
-		else if (data[mid] > val)
+		if (data[mid] > val)
 		{
 			hi = mid;
+		}
+		else 
+		{
+			lo = mid + 1;
 		}
 	}
 	return  --lo;
